@@ -1,0 +1,34 @@
+# Dot files
+.*
+
+# Coverage directory used by istanbul
+tests/coverage
+
+# Cypress
+tests/e2e/cypress/screenshots/**
+tests/e2e/cypress/videos/*.mp4
+
+# Exceptions
+!.babelrc.json
+!.cypress.json
+!.env.example
+!.eslintrc.json
+!.github
+!.gitignore
+!.gitkeep
+!.huskyrc.json
+!.prettierrc.json
+!.stylelintrc.json
+!.vuepress
+
+# Nuxt generate
+dist
+
+# Dependency directories
+node_modules
+
+# Log files
+*.log
+
+# Service worker
+sw.*
