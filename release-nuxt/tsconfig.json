@@ -1,26 +1,26 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "lib": ["dom", "esnext", "esnext.asynciterable"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "outDir": "./temp",
-    "paths": {
-      "@/*": ["./*"]
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "jsx": "preserve",
+        "lib": ["dom", "esnext", "esnext.asynciterable"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "outDir": "./temp",
+        "paths": {
+        "@/*": ["./*"]
+        },
+        "removeComments": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "esnext",
+        "types": ["@nuxt/types", "node"],
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
-    "removeComments": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "esnext",
-    "types": ["@nuxt/types", "node"],
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true, /* Enables experimental support for ES7 decorators. */
-    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */
-  },
-  "exclude": ["dist", "node_modules", "static", "tests/coverage", "tests/e2e"],
-  "extension": [".ts", ".tsx"]
+    "exclude": ["dist", "node_modules", "static", "tests/coverage", "tests/e2e"],
+    "extension": [".ts", ".tsx"]
 }
