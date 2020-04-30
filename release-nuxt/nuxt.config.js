@@ -1,3 +1,4 @@
+import open from 'open'
 require('dotenv').config()
 
 export default {
@@ -51,6 +52,11 @@ export default {
 		name: 'Magento SSR Nuxt',
 		short_name: 'Magento SSR Nuxt',
 		start_url: '.'
+	},
+	hooks: {
+		listen(server, { host, port }) {
+			if (server) open(`http://${host}:${port}`)
+		}
 	},
 	proxy: [
 		[
