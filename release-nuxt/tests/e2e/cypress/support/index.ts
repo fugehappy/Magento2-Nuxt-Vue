@@ -5,5 +5,5 @@
  *
  * @link shttps://on.cypress.io/configuration
  */
-import './commands';
-import './screenshots';
+import './commands'
+import './screenshots'

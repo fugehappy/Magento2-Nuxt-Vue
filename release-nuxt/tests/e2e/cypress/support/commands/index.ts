@@ -7,6 +7,6 @@
  *
  * @link https://on.cypress.io/custom-commands
  */
-import './itemprop';
+import './itemprop'
 
-export {};
+export {}

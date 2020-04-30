@@ -52,7 +52,7 @@ export default {
 		short_name: 'Magento SSR Nuxt',
 		start_url: '.',
 	},
-	modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
+	modules: ['@nuxtjs/pwa', '@nuxtjs/apollo', '@nuxtjs/axios'],
 	stylelint: {
 		configFile: './.stylelintrc.json',
 		emitError: true,
@@ -69,6 +69,52 @@ export default {
 				outputReport: true,
 			},
 		},
+	},
+	apollo: {
+		tokenName: 'bearer',
+		cookieAttributes: {
+			expires: 7,
+			path: '/',
+			domain: '',
+			secure: false,
+		},
+		includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
+		authenticationType: 'Bearer', // optional, default: 'Bearer'
+		defaultOptions: {
+			$query: {
+				loadingKey: 'loading',
+				fetchPolicy: 'cache-and-network',
+			},
+		},
+		clientConfigs: {
+			default: {
+				httpEndpoint: 'http://dev.vue-pwa.cn/',
+				browserHttpEndpoint: '/graphql',
+				httpLinkOptions: {
+					credentials: 'same-origin',
+				},
+				// wsEndpoint: 'ws://http://dev.vue-pwa.cn/', // optional
+				tokenName: 'apollo-token', // optional
+				persisting: false, // Optional
+				websocketsOnly: false, // Optional
+			},
+		},
+	},
+	router: {
+		scrollBehavior (to, from, savedPosition) {
+			if (to.hash) {
+				return {
+					selector: to.hash,
+					offset: { x: 0, y: 10 }
+				}
+			}
+
+			if (savedPosition) {
+				return savedPosition;
+			}
+
+			return { x: 0, y: 0 }
+		}
 	},
 	build: {
 		extend(config, ctx) {

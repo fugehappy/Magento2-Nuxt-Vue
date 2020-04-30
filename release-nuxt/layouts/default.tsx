@@ -6,7 +6,7 @@ export default class Default extends Vue {
 	protected render(): VNode {
 		return (
 			<div id="root">
-				<nuxt />
+				<nuxt keep-alive={true} />
 			</div>
 		)
 	}

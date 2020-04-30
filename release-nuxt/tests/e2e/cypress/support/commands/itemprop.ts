@@ -8,8 +8,8 @@
  * @return {Cypress.Chainable<JQuery<HTMLElement>>} jQuery HTMLElement.
  */
 Cypress.Commands.add(
-    'itemProp',
-    (value: string): Cypress.Chainable<JQuery<HTMLElement>> => {
-        return cy.get(`[itemprop=${value}]`);
-    }
-);
+	'itemProp',
+	(value: string): Cypress.Chainable<JQuery<HTMLElement>> => {
+		return cy.get(`[itemprop=${value}]`)
+	},
+)
