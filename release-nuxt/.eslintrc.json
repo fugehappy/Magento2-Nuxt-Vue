@@ -29,6 +29,7 @@
         "jest/prefer-to-have-length": "warn",
         "jest/valid-expect": "error",
         "no-console": 0,
-        "no-unused-vars": 0
+        "no-unused-vars": 0,
+        "no-useless-escape": 0
     }
 }

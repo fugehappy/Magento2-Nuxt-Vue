@@ -8,10 +8,10 @@ const getters: GetterTree<any, any> = {
 			return {
 				url: `${config.base_media_url}logo/${config.header_logo_src}`,
 				href: config.base_url,
-				title: config.logo_alt,
+				title: config.logo_alt
 			}
 		}
-	},
+	}
 }
 
 export default getters

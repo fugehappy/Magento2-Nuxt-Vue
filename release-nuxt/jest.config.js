@@ -8,13 +8,13 @@ module.exports = {
 		'ts-jest': {
 			babelConfig: '.babelrc.json',
 			compiler: 'typescript',
-			tsconfig: 'tsconfig.json',
-		},
+			tsconfig: 'tsconfig.json'
+		}
 	},
 	moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
 	moduleNameMapper: {
 		'^.+\\.scss$': '<rootDir>/tests/unit/jest/jest.mock.scss.js',
-		'^@/(.*)$': '<rootDir>/$1',
+		'^@/(.*)$': '<rootDir>/$1'
 	},
 	modulePathIgnorePatterns: [...defaults.modulePathIgnorePatterns, 'tests/e2e'],
 	preset: 'ts-jest',
@@ -23,7 +23,7 @@ module.exports = {
 	testEnvironment: 'node',
 	testRegex: '((\\.|/)test)\\.(ts|tsx?)$',
 	transform: {
-		'^.+\\.(ts|tsx?)$': 'ts-jest',
+		'^.+\\.(ts|tsx?)$': 'ts-jest'
 	},
-	verbose: true,
+	verbose: true
 }

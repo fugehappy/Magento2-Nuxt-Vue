@@ -8,9 +8,9 @@ const persisted: any = createPersistedState({
 	reducer: (state: any) => {
 		return {
 			storeConfig: state.storeConfig,
-			categoryMemu: state.categoryMemu,
+			categoryMemu: state.categoryMemu
 		}
-	},
+	}
 	// subscriber: (store: any) => (handler) => {
 	// 	const myHandler: Function = (mutation: MutationPayload, state: any) => {}
 	// 	store.subscribe(myHandler)

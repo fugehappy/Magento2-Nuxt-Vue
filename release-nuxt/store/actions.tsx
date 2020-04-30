@@ -2,23 +2,23 @@ import { ApolloActionTree } from './interface'
 import getStoreConfig from '@/graphql/queries/getStoreConfig.gql'
 
 const actions: ApolloActionTree<any, any> = {
-	async getStoreConfig({ commit, iosAlert }) {
+	async getStoreConfig({ apollo }) {
 		try {
-			const res: any = await this.app.apolloProvider.defaultClient.query({
-				query: getStoreConfig,
+			console.log(apollo)
+			const res: any = await apollo.query({
+				query: getStoreConfig
 			})
 
-			if (res.data) {
-				const globalConfig: any = res.data
-				commit('saveGlobalConfig', globalConfig)
-			}
+			// if (res.data) {
+			console.log(res)
+			// const globalConfig: any = []
+			// commit('saveGlobalConfig', globalConfig)
+			// }
 		} catch ({ graphQLErrors }) {
-			const message: string = graphQLErrors[0].message
-			iosAlert(message)
-				.then(() => {})
-				.catch(() => {})
+			const message: string = graphQLErrors
+			console.log(message)
 		}
-	},
+	}
 }
 
 export default actions

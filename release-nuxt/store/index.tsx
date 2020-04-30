@@ -5,7 +5,6 @@ import getters from './getters'
 import actions from './actions'
 import mutations from './mutations'
 import plugins from './plugins'
-// import persisted from './persist'
 
 Vue.use(Vuex)
 
@@ -15,7 +14,7 @@ const options: any = {
 	actions,
 	mutations,
 	modules: {},
-	plugins: [plugins],
+	plugins: [plugins]
 }
 const store: any = () => new Vuex.Store(options)
 

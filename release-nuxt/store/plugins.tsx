@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { apolloClient } from '@/plugins/apollo'
 
 const isPromise: Function = (val: any) => {
 	return val && typeof val.then === 'function'
@@ -19,14 +20,13 @@ const patchAction: Function = (store: any, type: any, handler: Function, local: 
 				state: local.state,
 				rootGetters: store.getters,
 				rootState: store.state,
-				apollo: store.$apollo.defaultClient,
+				apollo: apolloClient,
 				router: store.$router,
 				iosAlert: Vue.prototype.$iosAlert,
-				cookies: Vue.prototype.$cookies,
-				progress: Vue.prototype.$progress,
+				cookies: Vue.prototype.$cookies
 			},
 			payload,
-			cb,
+			cb
 		)
 
 		if (!isPromise(res)) res = Promise.resolve(res)
@@ -48,7 +48,7 @@ const patchModule: Function = (store: any, path: any, module: any, hot: any) => 
 	const local = module.context
 
 	module.forEachAction((action: any, key: any) =>
-		patchAction(store, namespace + key, action, local),
+		patchAction(store, namespace + key, action, local)
 	)
 	module.forEachChild((child: any, key: any) => patchModule(store, path.concat(key), child, hot))
 }

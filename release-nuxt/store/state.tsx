@@ -1,7 +1,7 @@
 const state: any = {
 	storeConfig: null,
 	countries: [],
-	rootIds: null,
+	rootIds: null
 }
 
 export default state

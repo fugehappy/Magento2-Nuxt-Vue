@@ -9,7 +9,7 @@ interface ApolloActionContext<S, R> extends ActionContext<S, R> {
 type ApolloActionHandler<S, R> = (
 	this: Store<R>,
 	injectee: ApolloActionContext<S, R>,
-	payload?: any,
+	payload?: any
 ) => any
 type ApolloAction<S, R> = ApolloActionHandler<S, R> | ActionObject<S, R>
 

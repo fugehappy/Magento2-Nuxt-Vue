@@ -8,7 +8,7 @@ const mutations: MutationTree<any> = {
 		state.storeConfig = config.storeConfig
 		state.countries = config.countries
 		state.rootIds = config.storeConfig.root_category_id
-	},
+	}
 }
 
 export default mutations
