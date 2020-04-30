@@ -52,6 +52,16 @@ export default {
 		short_name: 'Magento SSR Nuxt',
 		start_url: '.'
 	},
+	proxy: [
+		[
+			'/graphql',
+			{
+				target: 'http://dev.vue-pwa.cn/graphql',
+				changeOrigin: true,
+				secure: false
+			}
+		]
+	],
 	stylelint: {
 		configFile: './.stylelintrc.json',
 		emitError: true,
@@ -75,6 +85,7 @@ export default {
 	},
 	modules: [
 		'@nuxtjs/pwa',
+		'@nuxtjs/proxy',
 		'@nuxtjs/axios',
 		[
 			'@nuxtjs/apollo',
