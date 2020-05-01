@@ -108,6 +108,7 @@ export default {
 		'@nuxtjs/eslint-module',
 		'@nuxtjs/stylelint-module'
 	],
+	plugins: ['@/plugins/lazyload/index'],
 	typescript: {
 		typeCheck: {
 			eslint: true,
